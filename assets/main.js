@@ -1,10 +1,7 @@
 function preload_image() {
-	let image = 0
-	for (image; image < slides.length; image++) {
-	let infoSlides = slides[image]
-	const chemin = "./assets/images/slideshow/"
-	let img = new Image()	
-	img.src = chemin + infoSlides.image
+	for (i=0; i < slides.length; ++i) {
+		let img = new Image()
+		img.src = "./assets/images/slideshow/" + slides[i].image
 	}
 }
 
@@ -76,7 +73,6 @@ function updateslideActive(resultCallback) {
 
 let slideActive = 0;
 preload_image()
-console.log (preload_image)
 dots(slideActive)
 
 defilementClic(slideActive, updateslideActive);
