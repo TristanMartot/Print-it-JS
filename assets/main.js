@@ -1,3 +1,13 @@
+function preload_image() {
+	let image = 0
+	for (image; image < slides.length; image++) {
+	let infoSlides = slides[image]
+	const chemin = "./assets/images/slideshow/"
+	let img = new Image()	
+	img.src = chemin + infoSlides.image
+	}
+}
+
 function changeImgAndText(slideActive) {
 	let img = document.querySelector("#banner img")
 	let text = document.querySelector("#banner p")
@@ -65,6 +75,8 @@ function updateslideActive(resultCallback) {
 }
 
 let slideActive = 0;
+preload_image()
+console.log (preload_image)
 dots(slideActive)
 
 defilementClic(slideActive, updateslideActive);
