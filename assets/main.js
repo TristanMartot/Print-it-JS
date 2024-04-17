@@ -1,7 +1,7 @@
 function changeImgAndText(slideActive) {
 	let img = document.querySelector("#banner img")
 	let text = document.querySelector("#banner p")
-	const infoSlides = slides[slideActive]
+	let infoSlides = slides[slideActive]
 	const chemin = "./assets/images/slideshow/"
 	
 	img.src = chemin + infoSlides.image
